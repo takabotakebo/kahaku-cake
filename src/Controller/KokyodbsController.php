@@ -6,6 +6,10 @@ use App\Controller\AppController;
 class KokyodbsController extends AppController
 {
 
+    public function index()
+    {
+    }
+
     public function home()
     {
     }
@@ -37,6 +41,30 @@ class KokyodbsController extends AppController
 	$this->set('first',$first);
 
      }
+
+     public function excelinport() 
+     {
+	$readFile = "data.xlsx";	
+
+	function readXlsx($readFile){
+		App::import('Vendor', 'PHPExcel_Writer_IWriter', array('file' => 'phpexcel/PHPExcel/Writer/IWriter.php'));
+		App::import('Vendor', 'PHPExcel_Writer_Abstract', array('file' => 'phpexcel/PHPExcel/Writer/Abstract.php'));
+		App::import('Vendor', 'PHPExcel_Writer_Excel5', array('file' => 'phpexcel/PHPExcel/Writer/Excel5.php'));
+		App::import('Vendor', 'PHPExcel_Reader_Excel5', array('file' => 'phpexcel/PHPExcel/Reader/Excel5.php'));
+
+		if (!file_exists($readFile)) {
+     			exit($readFile. "が見つかりません。" . EOL);
+    		}
+
+		$objPExcel = PHPExcel_IOFactory::load($readFile);
+		return $objPExcel->getActiveSheet()->toArray(null,true,true,true);
+	}
+
+        $data = readXlsx($readFile);
+	$this->set('exceldata',$data);
+
+     }
+
 
 }
 

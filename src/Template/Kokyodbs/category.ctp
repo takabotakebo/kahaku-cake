@@ -2,9 +2,9 @@
 
     <div id="category-header">
 	<a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'home']); ?>">
-        	<span class="breadcrumb">HOME</span>
+        	<span class="breadcrumb">ホーム > </span>
 	</a>
-        <h1>KokyoDB Category</h1>
+        <h1>大分類</h1>
     </div>
 
 <div id="category">
