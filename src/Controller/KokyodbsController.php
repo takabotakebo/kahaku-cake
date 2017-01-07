@@ -2,7 +2,8 @@
 namespace App\Controller;
  
 use App\Controller\AppController;
- 
+use PHPExcel;
+
 class KokyodbsController extends AppController
 {
 
@@ -47,11 +48,6 @@ class KokyodbsController extends AppController
 	$readFile = "data.xlsx";	
 
 	function readXlsx($readFile){
-		App::import('Vendor', 'PHPExcel_Writer_IWriter', array('file' => 'phpexcel/PHPExcel/Writer/IWriter.php'));
-		App::import('Vendor', 'PHPExcel_Writer_Abstract', array('file' => 'phpexcel/PHPExcel/Writer/Abstract.php'));
-		App::import('Vendor', 'PHPExcel_Writer_Excel5', array('file' => 'phpexcel/PHPExcel/Writer/Excel5.php'));
-		App::import('Vendor', 'PHPExcel_Reader_Excel5', array('file' => 'phpexcel/PHPExcel/Reader/Excel5.php'));
-
 		if (!file_exists($readFile)) {
      			exit($readFile. "が見つかりません。" . EOL);
     		}
