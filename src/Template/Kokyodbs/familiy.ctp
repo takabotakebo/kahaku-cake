@@ -22,7 +22,7 @@
     <div id="category">
     <?php foreach ($kokyodbs as $kokyodb): ?>
 	<div class="familiy-table">
-    	<table border="1" width="800">
+    	<table width="800">
     		<thead>
         	    <tr>
             		<th>familiy</th>
@@ -134,7 +134,7 @@
 				if($kokyodb->first_survey){
 				    echo $kokyodb->first_survey;
 				}else{
-				    echo "none";
+				    echo "×";
 				}
 			     ?>
                         </td>
@@ -148,7 +148,7 @@
 				if($kokyodb->monitor_survey){
                                     echo $kokyodb->monitor_survey;
                                 }else{
-                                    echo "none";
+                                    echo "×";
                                 } 
  			    ?>
                         </td>
@@ -162,7 +162,7 @@
                                 if($kokyodb->second_survey){
                                     echo $kokyodb->second_survey;
                                 }else{
-                                    echo "none";
+                                    echo "×";
                                 }
 
  			    ?>

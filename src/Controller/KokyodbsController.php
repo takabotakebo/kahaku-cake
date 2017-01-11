@@ -48,9 +48,6 @@ class KokyodbsController extends AppController
 	$readFile = "data.xlsx";	
 
 	function readXlsx($readFile){
-		if (!file_exists($readFile)) {
-     			exit($readFile. "が見つかりません。" . EOL);
-    		}
 
 		$objPExcel = PHPExcel_IOFactory::load($readFile);
 		return $objPExcel->getActiveSheet()->toArray(null,true,true,true);

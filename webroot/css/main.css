@@ -9,6 +9,7 @@ body{
 
 #contents{
     width:1080px;
+    min-height:700px;
     height:auto;
     margin:0 auto;
     background-color:white;
@@ -294,19 +295,21 @@ h2{
 
 #category{
     width:800px;
-    min-height:700px;
+    min-height:400px;
     margin:0 auto;
     display:flex;
     display: -webkit-flex;
     -webkit-flex-wrap:wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
+    -webkit-justify-content:space-around;
+    justify-content:space-around;
 }
 
 
 #category a{
     text-decoration:none;
+    width: 400px;
+    height:110px;
 }
 
 .category-btn{
@@ -315,7 +318,6 @@ h2{
     background-color: #f78462;
     color: white;
     border-radius: 14px;
-    margin-top:36px;
     font-size: 30px;
     border-bottom: solid 5px;
     border-bottom-color:#8b4a37;
@@ -333,7 +335,6 @@ h2{
     background-color: #ec7c5b;
     color: white;
     border-radius: 14px;
-    margin-top:36px;
     font-size: 30px;
     border-bottom: solid 5px;
     border-bottom-color:#fab9a6;
@@ -370,5 +371,19 @@ h2{
 }
 
 .familiy-table{
+    border:none;
     margin-top:30px;
+    border-bottom:1px solid;
+    bprder-color:light-gray;
+}
+
+
+.familiy-table td:nth-child(1){
+    width:300px;
+    background-color:#b5b5b5;dddcdc
+} 
+
+.familiy-table td:nth-child(2){
+    width:500px;
+    background-color:#dddcdc;
 }
