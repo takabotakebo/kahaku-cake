@@ -19,115 +19,68 @@
 
     </div>
 
-    <div id="category">
-    <?php foreach ($kokyodbs as $kokyodb): ?>
-	<div class="familiy-table">
-    	<table width="800">
-    		<thead>
+    <div id="table-box">
+    <table class="family-table" cellspacing="0" cellpadding="0" style="table-layout: auto;">
+        <tbody>
+               <tr>
+                        <th>大分類</th>
+                        <th>中分類</th>
+                        <th>学名</th>
+                        <th>和名</th>
+                        <th>網(和名)</th>
+                        <th>網(学名)</th>
+                        <th>目(学名)</th>
+                        <th>目(和名)</th>
+                        <th>科(学名)</th>
+                        <th>科(和名)</th>
+                        <th>亜科(学名)</th>
+                        <th>亜科（和名）</th>
+                        <th>第一期</th>
+                        <th>モニタリング</th>
+                        <th>第二期</th>
+                        <th>環境省レッドリストランク</th>
+                        <th>東京都レッドリストランク</th>
+                        <th>参考文献</th>
+                        <th>備考</th>
+                        <th>リンク</th>
+                </tr>
+		<?php foreach ($kokyodbs as $kokyodb): ?>
         	    <tr>
-            		<th>familiy</th>
-        	    </tr>
-    		</thead>
-    		<tbody>
-        	    <tr>
-                	<td>
-                	    <span>大分類</span>
-            		</td>
 			<td>
 			    <?php echo $kokyodb->category; ?>
 			</td>
-        	    </tr>
-                    <tr>
-                        <td>
-                            <span>中分類</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->subcategory; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>学名</span>
                         </td>
                         <td>
                             <?php echo $kokyodb->scientific_name; ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>和名</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->japanese_name; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>綱（学名）</span>
                         </td>
                         <td>
                             <?php echo $kokyodb->class_taxon; ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>綱（和名）</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->class_taxon_ja; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>目（学名）</span>
                         </td>
                         <td>
                             <?php echo $kokyodb->order_taxon; ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>目（和名）</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->order_taxon_ja; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>科（学名）</span>
                         </td>
                         <td>
                             <?php echo $kokyodb->family; ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>科（和名）</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->family_ja; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>亜科（学名）</span>
                         </td>
                         <td>
                             <?php echo $kokyodb->subfamily; ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>亜科（和名）</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->subfamily_ja; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>第一期 (bool)</span>
                         </td>
                         <td>
                             <?php 
@@ -138,11 +91,6 @@
 				}
 			     ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>モニタリング (bool)</span>
-                        </td>
                         <td>
                             <?php
 				if($kokyodb->monitor_survey){
@@ -151,11 +99,6 @@
                                     echo "×";
                                 } 
  			    ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>第二期 (bool)</span>
                         </td>
                         <td>
                             <?php
@@ -167,51 +110,25 @@
 
  			    ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>環境省レッドリストランク</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->redlist_moe; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>東京都レッドリストランク</span>
                         </td>
                         <td>
                             <?php echo $kokyodb->redlist_tokyo; ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>参考文献</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->bibiliographies; ?>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>備考</span>
-                        </td>
                         <td>
                             <?php echo $kokyodb->notes; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>リンク</span>
                         </td>
                         <td>
                             <a><?php echo $kokyodb->link_url; ?></a>
                         </td>
                     </tr>
-		</tbody>
-	</table>
-	</div>
-    <?php endforeach; ?>
+    		<?php endforeach; ?>
+	</tbody>
+    </table>
     </div>
 
 </div>
