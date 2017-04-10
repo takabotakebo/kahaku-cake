@@ -17,7 +17,7 @@
 		    }else{
  			$subcategory = mb_convert_encoding($kokyodb->subcategory,'UTF-8','auto'); }
 		?>
-		<a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'familiy',$subcategory]); ?>">
+		<a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'subgroup',$subcategory]); ?>">
 			<div class="category-btn">
 				<span><?php echo $subcategory ?></span>
 			</div>
