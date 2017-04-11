@@ -1,7 +1,8 @@
 <?php echo $this->Html->charset(); ?>
-
-<div id="contents">
+<div id="contents-table">
     <div id="category-header">
+
+        <?php echo $this->Html->image('pankuzulogo.png',array('id' => 'pankuzu_logo')); ?>
 	<?php
      	   if(is_null($first->category)){
       	     echo 'empty';

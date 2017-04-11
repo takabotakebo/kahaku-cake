@@ -2,6 +2,7 @@
 
 <div id="contents">
     <div id="category-header">
+        <?php echo $this->Html->image('pankuzulogo.png',array('id' => 'pankuzu_logo')); ?>
         <a href="../../../index.html">
                 <span class="breadcrumb">ホーム > </span>
         </a>
