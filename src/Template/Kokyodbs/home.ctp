@@ -4,7 +4,7 @@
 		<div id="contents_introduction_top">
 			<?php echo $this->Html->image('introduction_img.png',array('id' => 'contents_introduction_gazou')); ?>
 			<div id="contents_introduction_right">
-				<h1 class="contents_introduction_h1">皇居の生き物データベース(仮)</h1>
+				<h1 class="contents_introduction_h1">皇居の生き物データベース</h1>
 				<p class="text_weight1">国立科学博物館では平成8年から25年まで継続して皇居の生物を調査したくさんの動物・植物・菌類などを確認しました。</p>
 				<a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'category']); ?>">
 					<div class="contents_introduction_btn_data">データベースを見る</div>
@@ -29,7 +29,7 @@
 
 	
         <div id="contents_main" >
-                 <h1>皇居の生き物データベース(仮)</h1>
+                 <h1>皇居の生き物データベース</h1>
                  <hr class="line3">
                  <div class="contents_topic1">
                     	<h2>簡単な概要</h2>

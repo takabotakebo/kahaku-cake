@@ -2,6 +2,7 @@
 
 <div id="contents">
     <div id="category-header">
+        <?php echo $this->Html->image('pankuzulogo.png',array('id' => 'pankuzu_logo')); ?>
         <a href="../../../index.html">
                 <span class="breadcrumb">ホーム > </span>
         </a>
@@ -17,7 +18,7 @@
 		    }else{
  			$subcategory = mb_convert_encoding($kokyodb->subcategory,'UTF-8','auto'); }
 		?>
-		<a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'familiy',$subcategory]); ?>">
+		<a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'subgroup',$subcategory]); ?>">
 			<div class="category-btn">
 				<span><?php echo $subcategory ?></span>
 			</div>

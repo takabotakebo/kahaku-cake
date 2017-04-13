@@ -1,7 +1,8 @@
 <?php echo $this->Html->charset(); ?>
-
-<div id="contents">
+<div id="contents-table">
     <div id="category-header">
+
+        <?php echo $this->Html->image('pankuzulogo.png',array('id' => 'pankuzu_logo')); ?>
 	<?php
      	   if(is_null($first->category)){
       	     echo 'empty';
@@ -9,11 +10,11 @@
              $breadcrumbcategory = mb_convert_encoding($first->category,'UTF-8','auto'); }
          ?>
 
-	<a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'home']); ?>">
+	<a href="../../../index.html">
                 <span class="breadcrumb">ホーム > </span>
         </a>
         <a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'category']); ?>" class="breadcrumb">大分類 > </a>
-	<span><a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'subcategory',$breadcrumbcategory]); ?>" class="breadcrumb"><?php echo $breadcrumbcategory ?> > </a></span>
+	<span><a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'group',$breadcrumbcategory]); ?>" class="breadcrumb"><?php echo $breadcrumbcategory ?> > </a></span>
 	<span class="breadcrumb-now"><?php echo $breadcrumbsubcategory ?></span>
 	<h1><?php echo $breadcrumbcategory . "-" . $breadcrumbsubcategory ?></h1>
 
