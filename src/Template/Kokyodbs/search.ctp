@@ -11,6 +11,7 @@
 
     <div id="table-box">
 	<div id="search_container">
+	    <h1>学名/和名から検索</h1>
    	    <form class="search_form" method="post" accept-charset="utf-8" action="/kokyodb/kokyodbs/search" >
 		<div style="display:none;"><input type="hidden" name="_method" value="POST"></div>
 		<input type="text" name="find" id="find" placeholder="学名/和名を入力してください">

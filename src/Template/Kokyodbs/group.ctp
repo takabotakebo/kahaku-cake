@@ -3,14 +3,16 @@
 <div id="contents">
     <div id="category-header">
         <?php echo $this->Html->image('pankuzulogo.png',array('id' => 'pankuzu_logo')); ?>
+
+    </div>
+    <div id="category">
         <a href="../../../index.html">
                 <span class="breadcrumb">ホーム > </span>
         </a>
         <a href="<?php echo $this->Url->build(['controller'=>'Kokyodbs','action'=>'category']); ?>" class="breadcrumb">大分類 > </a>
         <span class="breadcrumb-now"><?php echo $breadcrumbcategory ?></span>
         <h1>大分類-中分類</h1>
-    </div>
-    <div id="category">
+
         <?php foreach ($kokyodbs as $kokyodb): ?>
 		<?php 
 		    if(is_null($kokyodb->subcategory)){
