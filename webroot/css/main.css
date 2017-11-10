@@ -350,7 +350,7 @@ h2{
 
 
 #category-header{
-    width:800px;
+    width:90vw;
     margin:0 auto;
 }
 
@@ -378,15 +378,12 @@ h2{
 }
 
 
-table.familiy-table{
-    margin-top:30px;
-    border-bottom:1px solid;
-    border-color:light-gray;
-    background-color:red;
+table.family-table{
+    width:90vw;
 }
 
 tr{
-    width:auto;
+    width:90vw !important;
     height:40px;
 }
 
@@ -417,6 +414,47 @@ th{
     font-size: 11px;
 }
 #pankuzu_logo{
-    width:800px;
+    width:90vw;
+    margin:0 auto;
+}
+
+
+.search_form {
+    border-width:0px !important;
+    display:inline-flex;
+    width:355px;
+    margin:0 20px 5px 0;
+    float:right;
+}
+
+.search_form input{
+    width:300px;
+    height:40px;
+    border-radius: 7px;
+    padding:0 0 0 10px;
+    font-size:15px;
+    color:gray;
+}
+
+.search_form button{
+    width:50px;
+    height:40px;
+    border-radius: 7px;
+    background-color:#f78462;
+    color:white;
+    margin:0 0 0 5px;
+}
+
+.search_result {
+    margin:0 20px 20px 0;
+    color:gray;
+    width:100%;
+    float:right;
+    text-align:right;
+}
+
+#search_container{
+    height:150px;
+    width:100%;
     margin:0 auto;
 }
